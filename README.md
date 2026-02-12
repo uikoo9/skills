@@ -37,55 +37,94 @@
 - ✅ 安全和性能最佳实践
 - ✅ 基于 Node.js v25.6.0 (2026)
 
+---
+
+### 🎨 Tailwind CSS 专家
+
+涵盖所有工具类、响应式设计、组件模式和 Tailwind CSS v4+ 最佳实践的综合知识库。
+
+**知识覆盖：**
+- **核心概念**：Utility-first 设计方法、工作原理
+- **布局系统**：Container、Display、Position、Z-Index
+- **间距与尺寸**：Padding、Margin、Width、Height、Size 工具类
+- **排版系统**：字体、文本大小、行高、对齐、装饰
+- **颜色与背景**：完整色板、渐变、透明度
+- **边框与效果**：边框、圆角、阴影、混合模式
+- **滤镜与变换**：Blur、Scale、Rotate、Translate
+- **Flexbox & Grid**：完整的布局系统
+- **响应式设计**：断点系统、容器查询（v4+）
+- **状态变体**：Hover、Focus、Group、Peer
+- **深色模式**：完整实现指南
+- **组件模式**：Button、Card、Form、Modal、Navigation 等
+- **自定义配置**：@theme、任意值、自定义工具类
+- **V4 新特性**：size-*、容器查询、逻辑属性
+
+📖 [完整文档](./tailwindcss-expert/README.md) | 📝 [使用示例](./tailwindcss-expert/EXAMPLES.md)
+
+**特性：**
+- ✅ 3000+ 行综合文档
+- ✅ 准确的类名语法
+- ✅ 完整的 HTML 组件示例
+- ✅ 响应式和可访问性最佳实践
+- ✅ 基于 Tailwind CSS v4.1+ (2025-2026)
+
 ## 快速开始
 
 ### 安装方法
 
-#### 方法 1：直接复制（推荐）
+#### 选项 A：安装所有技能（推荐）
 ```bash
-# 将 nodejs-expert 技能复制到 Claude Code 技能目录
+# 将所有技能复制到 Claude Code 技能目录
+cp -r nodejs-expert tailwindcss-expert ~/.claude/skills/
+```
+
+#### 选项 B：安装单个技能
+
+**Node.js 完整指南：**
+```bash
+# 方法 1：直接复制
 cp -r nodejs-expert ~/.claude/skills/
-```
 
-#### 方法 2：符号链接（适合开发）
-```bash
-# 创建符号链接以便于更新
+# 方法 2：符号链接（适合开发）
 ln -s "$(pwd)/nodejs-expert" ~/.claude/skills/nodejs-expert
+
+# 方法 3：自动安装脚本
+cd nodejs-expert && ./install.sh
 ```
 
-#### 方法 3：自动安装
+**Tailwind CSS 专家：**
 ```bash
-# 使用内置安装脚本
-cd nodejs-expert
-./install.sh
-```
+# 方法 1：直接复制
+cp -r tailwindcss-expert ~/.claude/skills/
 
-#### 方法 4：Claude Desktop/Web
-```bash
-# 创建 ZIP 文件并拖拽到 Claude Desktop 或 Web 界面
-cd nodejs-expert
-zip -r nodejs-complete-guide.zip .
+# 方法 2：符号链接（适合开发）
+ln -s "$(pwd)/tailwindcss-expert" ~/.claude/skills/tailwindcss-expert
+
+# 方法 3：自动安装脚本
+cd tailwindcss-expert && ./install.sh
 ```
 
 ### 验证安装
 
 安装后，向 Claude Code 提问以测试技能：
 
+**测试 Node.js 技能：**
 ```
 Node.js 的事件循环是如何工作的？
 ```
 
-或者
-
+**测试 Tailwind CSS 技能：**
 ```
-如何使用现代语法创建 HTTP 服务器？
+用 Tailwind CSS 创建一个响应式按钮
 ```
 
 如果技能正常工作，您会收到详细的解释和完整的代码示例。
 
 ## 使用示例
 
-安装后，直接向 Claude Code 提出任何 Node.js 相关问题：
+安装后，直接向 Claude Code 提出相关问题：
+
+### Node.js 相关问题
 
 **基础概念：**
 - "解释 Node.js 事件循环的各个阶段"
@@ -107,18 +146,49 @@ Node.js 的事件循环是如何工作的？
 - "如何优化 Node.js 性能？"
 - "展示如何使用内置测试运行器"
 
+### Tailwind CSS 相关问题
+
+**基础概念：**
+- "什么是 utility-first CSS？"
+- "Tailwind CSS 的断点系统如何工作？"
+- "如何理解 Tailwind 的颜色体系？"
+
+**组件构建：**
+- "用 Tailwind CSS 创建一个响应式卡片"
+- "展示一个完整的登录表单"
+- "创建一个带动画的模态框"
+
+**布局系统：**
+- "如何使用 Flexbox 创建居中布局？"
+- "展示 Grid 的 12 列响应式系统"
+- "什么是容器查询？如何使用？"
+
+**深色模式：**
+- "如何实现深色模式切换？"
+- "展示深色模式的最佳实践"
+
+**高级特性：**
+- "如何使用 Group 和 Peer 变体？"
+- "展示任意值的用法"
+- "Tailwind v4 有哪些新特性？"
+
 ## 仓库结构
 
 ```
 skills/
-├── README.md              # 英文文档
-├── README.zh-CN.md        # 中文文档（本文件）
+├── README.md              # 中文文档（本文件）
+├── README.en.md           # 英文文档
 ├── CLAUDE.md              # Claude Code 在此仓库工作时的指导说明
-└── nodejs-expert/         # Node.js 完整指南技能
-    ├── SKILL.md           # 核心技能知识库（1200+ 行）
+├── nodejs-expert/         # Node.js 完整指南技能
+│   ├── SKILL.md           # 核心技能知识库（1200+ 行）
+│   ├── README.md          # 详细技能文档
+│   ├── EXAMPLES.md        # 15+ 个实际使用示例
+│   ├── TEST.md            # 验证测试用例
+│   └── install.sh         # 自动安装脚本
+└── tailwindcss-expert/    # Tailwind CSS 专家技能
+    ├── SKILL.md           # 核心技能知识库（3000+ 行）
     ├── README.md          # 详细技能文档
-    ├── EXAMPLES.md        # 15+ 个实际使用示例
-    ├── TEST.md            # 验证测试用例
+    ├── EXAMPLES.md        # 20+ 个实际使用示例
     └── install.sh         # 自动安装脚本
 ```
 
@@ -185,10 +255,11 @@ skills/
 
 ## 版本信息
 
-- **仓库版本**：1.0.0
+- **仓库版本**：1.1.0
+- **技能数量**：2（Node.js、Tailwind CSS）
 - **Node.js 技能版本**：1.0.0
-- **目标 Node.js 版本**：v25.6.0 (2026)
-- **最后更新**：2026-02-10
+- **Tailwind CSS 技能版本**：1.0.0
+- **最后更新**：2026-02-12
 
 ## 许可证
 
@@ -196,6 +267,8 @@ skills/
 
 ---
 
-**准备好用 Claude Code 加速您的 Node.js 开发了吗？** 立即安装技能并开始提问！
+**准备好用 Claude Code 加速您的开发了吗？** 立即安装技能并开始提问！
 
-有关 Node.js 技能的详细信息，请参阅 [Node.js 专家文档](./nodejs-expert/README.md)。
+技能详细信息：
+- [Node.js 完整指南文档](./nodejs-expert/README.md)
+- [Tailwind CSS 专家文档](./tailwindcss-expert/README.md)

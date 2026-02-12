@@ -37,55 +37,94 @@ A comprehensive Node.js knowledge base covering all core features, modules, APIs
 - ✅ Security and performance best practices
 - ✅ Based on Node.js v25.6.0 (2026)
 
+---
+
+### 🎨 Tailwind CSS Expert
+
+A comprehensive Tailwind CSS knowledge base covering all utility classes, responsive design, component patterns, and v4+ best practices.
+
+**Coverage includes:**
+- **Core Concepts**: Utility-first approach, philosophy
+- **Layout System**: Container, Display, Position, Z-Index
+- **Spacing & Sizing**: Padding, Margin, Width, Height, Size utilities
+- **Typography**: Fonts, text size, line height, alignment, decoration
+- **Colors & Backgrounds**: Complete color palette, gradients, opacity
+- **Borders & Effects**: Borders, radius, shadows, blend modes
+- **Filters & Transforms**: Blur, Scale, Rotate, Translate
+- **Flexbox & Grid**: Complete layout systems
+- **Responsive Design**: Breakpoint system, container queries (v4+)
+- **State Variants**: Hover, Focus, Group, Peer
+- **Dark Mode**: Complete implementation guide
+- **Component Patterns**: Button, Card, Form, Modal, Navigation, etc.
+- **Customization**: @theme, arbitrary values, custom utilities
+- **V4 Features**: size-*, container queries, logical properties
+
+📖 [Full Documentation](./tailwindcss-expert/README.md) | 📝 [Usage Examples](./tailwindcss-expert/EXAMPLES.md)
+
+**Features:**
+- ✅ 3000+ lines of comprehensive documentation
+- ✅ Accurate class name syntax
+- ✅ Complete HTML component examples
+- ✅ Responsive and accessibility best practices
+- ✅ Based on Tailwind CSS v4.1+ (2025-2026)
+
 ## Quick Start
 
 ### Installation
 
-#### Option 1: Direct Copy (Recommended)
+#### Option A: Install All Skills (Recommended)
 ```bash
-# Copy the nodejs-expert skill to your Claude Code skills directory
+# Copy all skills to your Claude Code skills directory
+cp -r nodejs-expert tailwindcss-expert ~/.claude/skills/
+```
+
+#### Option B: Install Individual Skills
+
+**Node.js Complete Guide:**
+```bash
+# Method 1: Direct copy
 cp -r nodejs-expert ~/.claude/skills/
-```
 
-#### Option 2: Symlink (For Development)
-```bash
-# Create a symlink for easy updates
+# Method 2: Symlink (for development)
 ln -s "$(pwd)/nodejs-expert" ~/.claude/skills/nodejs-expert
+
+# Method 3: Automated installer
+cd nodejs-expert && ./install.sh
 ```
 
-#### Option 3: Automated Installation
+**Tailwind CSS Expert:**
 ```bash
-# Use the built-in installer
-cd nodejs-expert
-./install.sh
-```
+# Method 1: Direct copy
+cp -r tailwindcss-expert ~/.claude/skills/
 
-#### Option 4: Claude Desktop/Web
-```bash
-# Create a ZIP file and drag it to Claude Desktop or Web
-cd nodejs-expert
-zip -r nodejs-complete-guide.zip .
+# Method 2: Symlink (for development)
+ln -s "$(pwd)/tailwindcss-expert" ~/.claude/skills/tailwindcss-expert
+
+# Method 3: Automated installer
+cd tailwindcss-expert && ./install.sh
 ```
 
 ### Verification
 
-After installation, test the skill by asking Claude Code:
+After installation, test the skills by asking Claude Code:
 
+**Test Node.js Skill:**
 ```
-Node.js 的事件循环是如何工作的？
-```
-
-or
-
-```
-How do I create an HTTP server in Node.js using modern syntax?
+How does the Node.js event loop work?
 ```
 
-If the skill is working, you'll receive detailed explanations with complete code examples.
+**Test Tailwind CSS Skill:**
+```
+Create a responsive button with Tailwind CSS
+```
+
+If the skills are working, you'll receive detailed explanations with complete code examples.
 
 ## Usage Examples
 
-Once installed, simply ask Claude Code any Node.js related question:
+Once installed, simply ask Claude Code related questions:
+
+### Node.js Questions
 
 **Basic Concepts:**
 - "Explain the Node.js event loop phases"
@@ -107,17 +146,49 @@ Once installed, simply ask Claude Code any Node.js related question:
 - "How can I optimize Node.js performance?"
 - "Show me how to use the built-in test runner"
 
+### Tailwind CSS Questions
+
+**Basic Concepts:**
+- "What is utility-first CSS?"
+- "How does Tailwind's breakpoint system work?"
+- "Explain Tailwind's color system"
+
+**Component Building:**
+- "Create a responsive card with Tailwind CSS"
+- "Show me a complete login form"
+- "Create an animated modal"
+
+**Layout Systems:**
+- "How do I center content with Flexbox?"
+- "Show me a 12-column responsive grid"
+- "What are container queries? How to use them?"
+
+**Dark Mode:**
+- "How do I implement dark mode toggle?"
+- "Show dark mode best practices"
+
+**Advanced Features:**
+- "How do I use Group and Peer variants?"
+- "Show arbitrary value usage"
+- "What's new in Tailwind v4?"
+
 ## Repository Structure
 
 ```
 skills/
-├── README.md              # This file
+├── README.md              # Chinese documentation
+├── README.en.md           # English documentation (this file)
 ├── CLAUDE.md             # Instructions for Claude Code when working in this repo
-└── nodejs-expert/        # Node.js Complete Guide Skill
-    ├── SKILL.md          # Core skill knowledge base (1200+ lines)
+├── nodejs-expert/        # Node.js Complete Guide Skill
+│   ├── SKILL.md          # Core skill knowledge base (1200+ lines)
+│   ├── README.md         # Detailed skill documentation
+│   ├── EXAMPLES.md       # 15+ real-world usage examples
+│   ├── TEST.md           # Test cases for validation
+│   └── install.sh        # Automated installation script
+└── tailwindcss-expert/   # Tailwind CSS Expert Skill
+    ├── SKILL.md          # Core skill knowledge base (3000+ lines)
     ├── README.md         # Detailed skill documentation
-    ├── EXAMPLES.md       # 15+ real-world usage examples
-    ├── TEST.md           # Test cases for validation
+    ├── EXAMPLES.md       # 20+ real-world usage examples
     └── install.sh        # Automated installation script
 ```
 
@@ -184,10 +255,11 @@ See [CLAUDE.md](./CLAUDE.md) for detailed development guidelines.
 
 ## Version Information
 
-- **Repository Version**: 1.0.0
+- **Repository Version**: 1.1.0
+- **Number of Skills**: 2 (Node.js, Tailwind CSS)
 - **Node.js Skill Version**: 1.0.0
-- **Target Node.js Version**: v25.6.0 (2026)
-- **Last Updated**: 2026-02-10
+- **Tailwind CSS Skill Version**: 1.0.0
+- **Last Updated**: 2026-02-12
 
 ## License
 
@@ -195,6 +267,8 @@ Skills in this repository are provided as knowledge resources for Claude Code. S
 
 ---
 
-**Ready to supercharge your Node.js development with Claude Code?** Install the skill and start asking questions!
+**Ready to supercharge your development with Claude Code?** Install the skills and start asking questions!
 
-For detailed information about the Node.js skill, see the [Node.js Expert Documentation](./nodejs-expert/README.md).
+Detailed skill information:
+- [Node.js Complete Guide Documentation](./nodejs-expert/README.md)
+- [Tailwind CSS Expert Documentation](./tailwindcss-expert/README.md)
