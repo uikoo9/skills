@@ -68,6 +68,30 @@ A comprehensive Tailwind CSS knowledge base covering all utility classes, respon
 - ✅ Responsive and accessibility best practices
 - ✅ Based on Tailwind CSS v4.1+ (2025-2026)
 
+---
+
+### 🎯 CSS Tricks - You Need to Know
+
+A comprehensive collection of 52 practical CSS tricks and techniques for common web design challenges, with production-ready solutions.
+
+**Coverage includes:**
+- **Borders & Backgrounds** (6 tricks): Translucent borders, multiple borders, inner rounded corners, background positioning, striped backgrounds, 1px lines
+- **Shape Drawing** (6 tricks): Ellipses, parallelograms, angled corners, pie charts, speech bubbles, polygons
+- **Visual Effects** (9 tricks): Shadows, glassmorphism, zebra stripes, text effects, circular text, image comparison sliders
+- **User Experience** (11 tricks): Mouse cursors, extended click areas, custom form controls, background dimming, text underlines, custom scrollbars
+- **Structure & Layout** (7 tricks): Full-screen backgrounds with fixed content, sticky footers, centering solutions, holy grail layout, double wing layout, Flexbox guide
+- **Transitions & Animations** (7 tricks): Bounce effects, elastic animations, blinking effects, typing animations, jitter effects, smooth scrolling, circular animations
+- **Other Utilities** (3 tricks): Common code snippets, CSS custom properties, fun CSS projects
+
+📖 [Full Documentation](./css-tricks/README.md) | 📝 [Usage Examples](./css-tricks/EXAMPLES.md)
+
+**Features:**
+- ✅ 52 CSS tricks across 7 categories
+- ✅ Production-ready complete code examples
+- ✅ Multiple implementation approaches compared
+- ✅ Browser compatibility notes
+- ✅ Based on [You-need-to-know-css](https://github.com/l-hammer/You-need-to-know-css) project
+
 ## Quick Start
 
 ### Installation
@@ -75,7 +99,7 @@ A comprehensive Tailwind CSS knowledge base covering all utility classes, respon
 #### Option A: Install All Skills (Recommended)
 ```bash
 # Copy all skills to your Claude Code skills directory
-cp -r nodejs-expert tailwindcss-expert ~/.claude/skills/
+cp -r nodejs-expert tailwindcss-expert css-tricks ~/.claude/skills/
 ```
 
 #### Option B: Install Individual Skills
@@ -104,6 +128,18 @@ ln -s "$(pwd)/tailwindcss-expert" ~/.claude/skills/tailwindcss-expert
 cd tailwindcss-expert && ./install.sh
 ```
 
+**CSS Tricks:**
+```bash
+# Method 1: Direct copy
+cp -r css-tricks ~/.claude/skills/
+
+# Method 2: Symlink (for development)
+ln -s "$(pwd)/css-tricks" ~/.claude/skills/css-tricks
+
+# Method 3: Automated installer
+cd css-tricks && ./install.sh
+```
+
 ### Verification
 
 After installation, test the skills by asking Claude Code:
@@ -116,6 +152,11 @@ How does the Node.js event loop work?
 **Test Tailwind CSS Skill:**
 ```
 Create a responsive button with Tailwind CSS
+```
+
+**Test CSS Tricks Skill:**
+```
+How do I create a custom checkbox?
 ```
 
 If the skills are working, you'll receive detailed explanations with complete code examples.
@@ -172,6 +213,33 @@ Once installed, simply ask Claude Code related questions:
 - "Show arbitrary value usage"
 - "What's new in Tailwind v4?"
 
+### CSS Tricks Questions
+
+**Borders & Backgrounds:**
+- "How do I create a translucent border?"
+- "Show me how to implement multiple borders"
+- "How do you create a 1px line on high-resolution screens?"
+
+**Forms & Interactions:**
+- "Create a custom checkbox"
+- "How do I expand button click areas?"
+- "Show me a custom toggle switch"
+
+**Layout Solutions:**
+- "Implement a sticky footer"
+- "Show 6 ways to center content"
+- "What is the holy grail layout?"
+
+**Visual Effects:**
+- "Create a glassmorphism effect"
+- "How do I implement text typing animation?"
+- "Show me a bounce animation effect"
+
+**Practical Applications:**
+- "Create an image comparison slider"
+- "How do I customize scrollbar styling?"
+- "Implement a dark mode toggle effect"
+
 ## Repository Structure
 
 ```
@@ -189,6 +257,11 @@ skills/
     ├── SKILL.md          # Core skill knowledge base (3000+ lines)
     ├── README.md         # Detailed skill documentation
     ├── EXAMPLES.md       # 20+ real-world usage examples
+    └── install.sh        # Automated installation script
+└── css-tricks/           # CSS Tricks Skill
+    ├── SKILL.md          # Core skill knowledge base (52 tricks)
+    ├── README.md         # Detailed skill documentation
+    ├── EXAMPLES.md       # 10+ complete usage examples
     └── install.sh        # Automated installation script
 ```
 
@@ -255,11 +328,12 @@ See [CLAUDE.md](./CLAUDE.md) for detailed development guidelines.
 
 ## Version Information
 
-- **Repository Version**: 1.1.0
-- **Number of Skills**: 2 (Node.js, Tailwind CSS)
+- **Repository Version**: 1.2.0
+- **Number of Skills**: 3 (Node.js, Tailwind CSS, CSS Tricks)
 - **Node.js Skill Version**: 1.0.0
 - **Tailwind CSS Skill Version**: 1.0.0
-- **Last Updated**: 2026-02-12
+- **CSS Tricks Skill Version**: 1.0.0
+- **Last Updated**: 2026-02-13
 
 ## License
 
@@ -272,3 +346,4 @@ Skills in this repository are provided as knowledge resources for Claude Code. S
 Detailed skill information:
 - [Node.js Complete Guide Documentation](./nodejs-expert/README.md)
 - [Tailwind CSS Expert Documentation](./tailwindcss-expert/README.md)
+- [CSS Tricks Documentation](./css-tricks/README.md)

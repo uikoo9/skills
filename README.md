@@ -68,6 +68,30 @@
 - ✅ 响应式和可访问性最佳实践
 - ✅ 基于 Tailwind CSS v4.1+ (2025-2026)
 
+---
+
+### 🎯 CSS Tricks - 你需要知道的CSS
+
+包含52个实用CSS技巧的综合集合，涵盖常见网页设计问题的生产就绪解决方案。
+
+**知识覆盖：**
+- **边框与背景**（6个技巧）：半透明边框、多重边框、内圆角、背景定位、条纹背景、1px线
+- **形状绘制**（6个技巧）：椭圆、平行四边形、切角效果、饼图、提示气泡、多边形
+- **视觉效果**（9个技巧）：阴影、毛玻璃效果、斑马条纹、文字效果、环形文字、图片对比滑块
+- **用户体验**（11个技巧）：鼠标光标、扩展点击区域、自定义表单控件、背景弱化、文字下划线、自定义滚动条
+- **结构与布局**（7个技巧）：全屏背景固定内容、粘性页脚、居中方案、圣杯布局、双飞翼布局、Flexbox完整指南
+- **过渡与动画**（7个技巧）：弹跳、弹性、闪烁、打字效果、抖动、平滑滚动、环形动画
+- **其他工具**（3个技巧）：常用代码片段、CSS自定义变量、有趣的CSS项目
+
+📖 [完整文档](./css-tricks/README.md) | 📝 [使用示例](./css-tricks/EXAMPLES.md)
+
+**特性：**
+- ✅ 52个CSS技巧，涵盖7大类别
+- ✅ 生产就绪的完整代码示例
+- ✅ 多种实现方案对比
+- ✅ 浏览器兼容性说明
+- ✅ 基于 [You-need-to-know-css](https://github.com/l-hammer/You-need-to-know-css) 项目
+
 ## 快速开始
 
 ### 安装方法
@@ -75,7 +99,7 @@
 #### 选项 A：安装所有技能（推荐）
 ```bash
 # 将所有技能复制到 Claude Code 技能目录
-cp -r nodejs-expert tailwindcss-expert ~/.claude/skills/
+cp -r nodejs-expert tailwindcss-expert css-tricks ~/.claude/skills/
 ```
 
 #### 选项 B：安装单个技能
@@ -104,6 +128,18 @@ ln -s "$(pwd)/tailwindcss-expert" ~/.claude/skills/tailwindcss-expert
 cd tailwindcss-expert && ./install.sh
 ```
 
+**CSS Tricks：**
+```bash
+# 方法 1：直接复制
+cp -r css-tricks ~/.claude/skills/
+
+# 方法 2：符号链接（适合开发）
+ln -s "$(pwd)/css-tricks" ~/.claude/skills/css-tricks
+
+# 方法 3：自动安装脚本
+cd css-tricks && ./install.sh
+```
+
 ### 验证安装
 
 安装后，向 Claude Code 提问以测试技能：
@@ -116,6 +152,11 @@ Node.js 的事件循环是如何工作的？
 **测试 Tailwind CSS 技能：**
 ```
 用 Tailwind CSS 创建一个响应式按钮
+```
+
+**测试 CSS Tricks 技能：**
+```
+如何创建自定义复选框？
 ```
 
 如果技能正常工作，您会收到详细的解释和完整的代码示例。
@@ -172,6 +213,33 @@ Node.js 的事件循环是如何工作的？
 - "展示任意值的用法"
 - "Tailwind v4 有哪些新特性？"
 
+### CSS Tricks 相关问题
+
+**边框与背景：**
+- "如何创建半透明边框？"
+- "展示如何实现多重边框"
+- "1px线在高清屏幕上如何实现？"
+
+**表单与交互：**
+- "创建自定义复选框"
+- "如何扩大按钮的点击区域？"
+- "展示自定义开关按钮"
+
+**布局方案：**
+- "实现粘性页脚"
+- "展示6种居中对齐的方法"
+- "什么是圣杯布局？"
+
+**视觉效果：**
+- "创建毛玻璃效果"
+- "如何实现文字打字动画？"
+- "展示弹跳动画效果"
+
+**实际应用：**
+- "创建一个图片对比滑块"
+- "如何自定义滚动条样式？"
+- "实现深色模式切换效果"
+
 ## 仓库结构
 
 ```
@@ -185,10 +253,15 @@ skills/
 │   ├── EXAMPLES.md        # 15+ 个实际使用示例
 │   ├── TEST.md            # 验证测试用例
 │   └── install.sh         # 自动安装脚本
-└── tailwindcss-expert/    # Tailwind CSS 专家技能
-    ├── SKILL.md           # 核心技能知识库（3000+ 行）
+├── tailwindcss-expert/    # Tailwind CSS 专家技能
+│   ├── SKILL.md           # 核心技能知识库（3000+ 行）
+│   ├── README.md          # 详细技能文档
+│   ├── EXAMPLES.md        # 20+ 个实际使用示例
+│   └── install.sh         # 自动安装脚本
+└── css-tricks/            # CSS Tricks 技能
+    ├── SKILL.md           # 核心技能知识库（52个技巧）
     ├── README.md          # 详细技能文档
-    ├── EXAMPLES.md        # 20+ 个实际使用示例
+    ├── EXAMPLES.md        # 10+ 个完整使用示例
     └── install.sh         # 自动安装脚本
 ```
 
@@ -255,11 +328,12 @@ skills/
 
 ## 版本信息
 
-- **仓库版本**：1.1.0
-- **技能数量**：2（Node.js、Tailwind CSS）
+- **仓库版本**：1.2.0
+- **技能数量**：3（Node.js、Tailwind CSS、CSS Tricks）
 - **Node.js 技能版本**：1.0.0
 - **Tailwind CSS 技能版本**：1.0.0
-- **最后更新**：2026-02-12
+- **CSS Tricks 技能版本**：1.0.0
+- **最后更新**：2026-02-13
 
 ## 许可证
 
@@ -272,3 +346,4 @@ skills/
 技能详细信息：
 - [Node.js 完整指南文档](./nodejs-expert/README.md)
 - [Tailwind CSS 专家文档](./tailwindcss-expert/README.md)
+- [CSS Tricks 文档](./css-tricks/README.md)
