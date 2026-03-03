@@ -70,6 +70,36 @@ A comprehensive Tailwind CSS knowledge base covering all utility classes, respon
 
 ---
 
+### ⚡ Next.js Complete Expert Guide
+
+A comprehensive Next.js knowledge base covering all core features, App Router, Server/Client Components, data fetching, caching mechanisms, and Next.js 15+ best practices.
+
+**Coverage includes:**
+- **Core Concepts**: Project structure, file conventions, TypeScript configuration
+- **Routing System**: File-based routing, dynamic routes, route groups, parallel routes, intercepting routes
+- **Server & Client Components**: When to use each, composition patterns, data sharing strategies
+- **Data Fetching**: Server Components, Client Components, streaming, request deduplication
+- **Caching System**: 4 caching mechanisms, fetch API caching, Cache Tags, revalidation
+- **Navigation Optimization**: Link component, prefetching strategies, performance optimization
+- **Server Actions**: Creating and invoking actions, form handling, validation, error handling
+- **API Routes**: Route Handlers, all HTTP methods, streaming responses
+- **Built-in Components**: Image, Link, Font, Script, Form optimization
+- **Rendering Strategies**: Static, Dynamic, ISR, Streaming, Partial Prerendering
+- **Error Handling**: Error Boundaries, Loading States, Not Found pages
+- **Configuration**: next.config.js, Route Segment Config, environment variables, Metadata API
+- **Best Practices**: Component organization, performance optimization, security practices, deployment checklist
+
+📖 [Full Documentation](./nextjs-expert/README.md) | 📝 [Usage Examples](./nextjs-expert/EXAMPLES.md)
+
+**Features:**
+- ✅ 2000+ lines of comprehensive documentation
+- ✅ 400+ code examples
+- ✅ TypeScript-first approach
+- ✅ Production-ready complete examples
+- ✅ Based on Next.js 15.x (2026)
+
+---
+
 ### 🎯 CSS Tricks - You Need to Know
 
 A comprehensive collection of 52 practical CSS tricks and techniques for common web design challenges, with production-ready solutions.
@@ -99,7 +129,7 @@ A comprehensive collection of 52 practical CSS tricks and techniques for common 
 #### Option A: Install All Skills (Recommended)
 ```bash
 # Copy all skills to your Claude Code skills directory
-cp -r nodejs-expert tailwindcss-expert css-tricks ~/.claude/skills/
+cp -r nodejs-expert nextjs-expert tailwindcss-expert css-tricks ~/.claude/skills/
 ```
 
 #### Option B: Install Individual Skills
@@ -114,6 +144,18 @@ ln -s "$(pwd)/nodejs-expert" ~/.claude/skills/nodejs-expert
 
 # Method 3: Automated installer
 cd nodejs-expert && ./install.sh
+```
+
+**Next.js Complete Expert Guide:**
+```bash
+# Method 1: Direct copy
+cp -r nextjs-expert ~/.claude/skills/
+
+# Method 2: Symlink (for development)
+ln -s "$(pwd)/nextjs-expert" ~/.claude/skills/nextjs-expert
+
+# Method 3: Automated installer
+cd nextjs-expert && ./install.sh
 ```
 
 **Tailwind CSS Expert:**

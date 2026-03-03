@@ -70,6 +70,36 @@
 
 ---
 
+### ⚡ Next.js 完整专家指南
+
+涵盖所有核心特性、App Router、Server/Client Components、数据获取、缓存机制和 Next.js 15+ 最佳实践的综合知识库。
+
+**知识覆盖：**
+- **核心概念**：项目结构、文件约定、TypeScript 配置
+- **路由系统**：文件路由、动态路由、路由组、并行路由、拦截路由
+- **Server & Client Components**：何时使用、组合模式、数据共享策略
+- **数据获取**：Server Components、Client Components、流式传输、请求去重
+- **缓存系统**：4种缓存机制、fetch API 缓存、Cache Tags、重新验证
+- **导航优化**：Link 组件、预取策略、性能优化
+- **Server Actions**：创建和调用、表单处理、验证、错误处理
+- **API Routes**：Route Handlers、所有 HTTP 方法、流式响应
+- **内置组件**：Image、Link、Font、Script、Form 优化
+- **渲染策略**：静态���动态、ISR、流式渲染、部分预渲染
+- **错误处理**：Error Boundaries、Loading States、Not Found 页面
+- **配置**：next.config.js、Route Segment Config、环境变量、Metadata API
+- **最佳实践**：组件组织、性能优化、安全实践、部署清单
+
+📖 [完整文档](./nextjs-expert/README.md) | 📝 [使用示例](./nextjs-expert/EXAMPLES.md)
+
+**特性：**
+- ✅ 2000+ 行综合文档
+- ✅ 400+ 代码示例
+- ✅ TypeScript 优先
+- ✅ 生产就绪的完整示例
+- ✅ 基于 Next.js 15.x (2026)
+
+---
+
 ### 🎯 CSS Tricks - 你需要知道的CSS
 
 包含52个实用CSS技巧的综合集合，涵盖常见网页设计问题的生产就绪解决方案。
@@ -99,7 +129,7 @@
 #### 选项 A：安装所有技能（推荐）
 ```bash
 # 将所有技能复制到 Claude Code 技能目录
-cp -r nodejs-expert tailwindcss-expert css-tricks ~/.claude/skills/
+cp -r nodejs-expert nextjs-expert tailwindcss-expert css-tricks ~/.claude/skills/
 ```
 
 #### 选项 B：安装单个技能
@@ -114,6 +144,18 @@ ln -s "$(pwd)/nodejs-expert" ~/.claude/skills/nodejs-expert
 
 # 方法 3：自动安装脚本
 cd nodejs-expert && ./install.sh
+```
+
+**Next.js 完整专家指南：**
+```bash
+# 方法 1：直接复制
+cp -r nextjs-expert ~/.claude/skills/
+
+# 方法 2：符号链接（适合开发）
+ln -s "$(pwd)/nextjs-expert" ~/.claude/skills/nextjs-expert
+
+# 方法 3：自动安装脚本
+cd nextjs-expert && ./install.sh
 ```
 
 **Tailwind CSS 专家：**
@@ -147,6 +189,18 @@ cd css-tricks && ./install.sh
 **测试 Node.js 技能：**
 ```
 Node.js 的事件循环是如何工作的？
+如何实现基于 Promise 的文件读取？
+Worker Threads 和 Child Process 有什么区别？
+```
+
+**测试 Next.js 技能：**
+```
+Server Components 和 Client Components 有什么区别？
+如何在 Next.js 中实现数据缓存和重新验证？
+动态路由如何使用 generateStaticParams？
+```
+
+**测试 Tailwind CSS 技能：**
 ```
 
 **测试 Tailwind CSS 技能：**
