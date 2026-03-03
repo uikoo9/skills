@@ -1,3 +1,8 @@
+---
+name: CSS Tricks
+description: 52 essential CSS tricks and techniques for modern web design. Covers borders, backgrounds, shapes, visual effects, user experience, layouts, animations, and utilities with production-ready code examples.
+---
+
 # CSS Tricks - You Need to Know
 
 **Version**: 1.0.0

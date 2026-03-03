@@ -1,3 +1,8 @@
+---
+name: Next.js Expert
+description: Comprehensive Next.js knowledge base covering all core features, App Router, Server/Client Components, data fetching, caching, routing, and modern development patterns for Next.js 15+.
+---
+
 # Next.js Complete Expert Guide
 
 A comprehensive knowledge base covering all Next.js core features, App Router, data fetching, caching, routing, server/client components, and best practices for modern Next.js 15+ development.

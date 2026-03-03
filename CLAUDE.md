@@ -4,19 +4,34 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This repository contains a comprehensive **Node.js Complete Guide Skill** for Claude Code - a complete knowledge base covering all Node.js core features, modules, APIs, and best practices.
+This repository contains a collection of comprehensive skills for Claude Code, including Node.js, Next.js, Tailwind CSS, and CSS Tricks - complete knowledge bases covering all core features, modules, APIs, and best practices.
 
 ## Repository Structure
 
 ```
-skill-nodejs/
-├── nodejs-expert/          # The Node.js Complete Guide Skill
+skills/
+├── nodejs-expert/          # Node.js Complete Guide Skill
 │   ├── SKILL.md           # Core skill file (1200+ lines of Node.js knowledge)
 │   ├── README.md          # Detailed installation and usage guide
 │   ├── TEST.md            # Test cases for validating skill activation
 │   ├── EXAMPLES.md        # 15+ real-world usage examples
 │   └── install.sh         # Automated installation script
+├── nextjs-expert/         # Next.js Complete Expert Guide
+│   ├── SKILL.md           # Core skill file (Next.js 15+ knowledge)
+│   ├── README.md          # Installation and usage guide
+│   ├── EXAMPLES.md        # Real-world usage examples
+│   └── install.sh         # Automated installation script
+├── tailwindcss-expert/    # Tailwind CSS Expert Guide
+│   ├── SKILL.md           # Core skill file (Tailwind v4+ knowledge)
+│   ├── README.md          # Installation and usage guide
+│   ├── EXAMPLES.md        # Real-world usage examples
+│   └── install.sh         # Automated installation script
+├── css-tricks/            # CSS Tricks Collection
+│   ├── SKILL.md           # Core skill file (52 CSS tricks)
+│   ├── README.md          # Installation and usage guide
+│   └── install.sh         # Automated installation script
 ├── package.json           # Project metadata
+├── README.md              # Main repository documentation
 └── CLAUDE.md             # This file
 ```
 
@@ -74,16 +89,46 @@ zip -r nodejs-complete-guide.zip .
 
 ## Development Guidelines
 
+### ⚠️ Critical Requirement: YAML Frontmatter
+
+**EVERY SKILL.md FILE MUST START WITH YAML FRONTMATTER**
+
+Claude Code requires YAML frontmatter at the beginning of each SKILL.md file to recognize and register the skill. Without this metadata, the skill will not be detected.
+
+**Required format:**
+
+```yaml
+---
+name: Skill Name
+description: Brief description of the skill covering main features and use cases.
+---
+```
+
+**Example:**
+
+```yaml
+---
+name: Next.js Expert
+description: Comprehensive Next.js knowledge base covering all core features, App Router, Server/Client Components, data fetching, caching, routing, and modern development patterns for Next.js 15+.
+---
+
+# Next.js Complete Expert Guide
+...rest of content...
+```
+
+**Common mistake:** Starting the file directly with `# Title` without the frontmatter block will cause the skill to be invisible to Claude Code.
+
 ### Updating the Skill
 
 When updating `SKILL.md`:
 
-1. **Maintain structure** - Keep the 13-section organization
-2. **Use modern syntax** - ESM imports with `node:` prefix, async/await
-3. **Include complete examples** - Code should be runnable as-is
-4. **Add error handling** - All examples should handle errors properly
-5. **Explain the "why"** - Not just "how to do it" but "why this way"
-6. **Update version info** - Keep Node.js version current (v25.6.0 as of 2026)
+1. **Maintain frontmatter** - ALWAYS keep the YAML frontmatter at the top
+2. **Maintain structure** - Keep the organized section layout
+3. **Use modern syntax** - ESM imports with `node:` prefix, async/await
+4. **Include complete examples** - Code should be runnable as-is
+5. **Add error handling** - All examples should handle errors properly
+6. **Explain the "why"** - Not just "how to do it" but "why this way"
+7. **Update version info** - Keep version numbers current
 
 ### Code Style in SKILL.md
 
@@ -112,14 +157,45 @@ fs.readFile('config.json', (err, data) => {
 
 After modifying the skill:
 
-1. Copy/link the updated skill to `~/.claude/skills/`
-2. Ask Claude Code test questions from `TEST.md` or `EXAMPLES.md`
-3. Verify responses include:
+1. **Verify YAML frontmatter** - Ensure the file starts with `---` and contains `name:` and `description:` fields
+2. Copy/link the updated skill to `~/.claude/skills/`
+   ```bash
+   cp -r <skill-name> ~/.claude/skills/
+   ```
+3. Restart Claude Code or wait for automatic refresh
+4. Check if skill appears in the available skills list (shown in system-reminder messages)
+5. Ask Claude Code test questions from `TEST.md` or `EXAMPLES.md`
+6. Verify responses include:
    - Detailed explanations
    - Complete code examples
    - Modern syntax (ESM, async/await)
    - Error handling
    - Best practices
+
+### Troubleshooting: Skill Not Detected
+
+If a skill doesn't appear in Claude Code:
+
+1. **Check YAML frontmatter** - Most common issue is missing or malformed frontmatter
+   ```bash
+   head -n 5 <skill-name>/SKILL.md
+   ```
+   Should show:
+   ```yaml
+   ---
+   name: Skill Name
+   description: ...
+   ---
+   ```
+
+2. **Verify file location** - Skill should be in `~/.claude/skills/<skill-name>/SKILL.md`
+
+3. **Check file permissions** - Ensure SKILL.md is readable
+   ```bash
+   ls -la ~/.claude/skills/<skill-name>/SKILL.md
+   ```
+
+4. **Restart Claude Code** - Changes may require restart to take effect
 
 ## Common Development Tasks
 
@@ -154,13 +230,34 @@ Good examples should:
 - Demonstrate best practices
 - Use modern Node.js APIs
 
-## Skill Metadata
+## Available Skills
 
-- **Name**: Node.js Complete Guide
+### 1. Node.js Complete Guide
+- **Name**: `nodejs-complete-guide`
 - **Description**: Comprehensive Node.js knowledge base covering all core modules, APIs, async programming, streams, events, file system, networking, and best practices for modern Node.js development.
 - **Version**: 1.0.0
 - **Last Updated**: 2026-02-10
 - **Node.js Version**: v25.6.0
+
+### 2. Next.js Expert
+- **Name**: `nextjs-expert`
+- **Description**: Comprehensive Next.js knowledge base covering all core features, App Router, Server/Client Components, data fetching, caching, routing, and modern development patterns for Next.js 15+.
+- **Version**: 1.0.0
+- **Last Updated**: 2026-03-03
+- **Next.js Version**: 15.x
+
+### 3. Tailwind CSS Expert
+- **Name**: `tailwindcss-expert`
+- **Description**: Comprehensive Tailwind CSS knowledge base covering all utility classes, responsive design, component patterns, customization, and best practices for modern web development with Tailwind CSS v4.
+- **Version**: 1.0.0
+- **Last Updated**: 2026-02-12
+- **Tailwind Version**: v4.1+
+
+### 4. CSS Tricks
+- **Name**: `css-tricks`
+- **Description**: 52 essential CSS tricks and techniques for modern web design. Covers borders, backgrounds, shapes, visual effects, user experience, layouts, animations, and utilities with production-ready code examples.
+- **Version**: 1.0.0
+- **Last Updated**: 2026-02-13
 
 ## Resources
 
@@ -181,9 +278,31 @@ Good examples should:
 
 When working in this repository:
 
-- The main deliverable is `nodejs-expert/SKILL.md`
-- All code examples should use ESM and `node:` prefix
-- Prioritize modern async/await over callbacks
+- The main deliverables are the `SKILL.md` files in each skill directory
+- **CRITICAL**: Every SKILL.md must have YAML frontmatter with `name` and `description`
+- All code examples should use modern syntax (ESM with `node:` prefix, async/await)
+- Prioritize modern patterns over legacy approaches
 - Include security considerations where relevant
 - Keep examples complete and runnable
 - Maintain consistency in code style across all examples
+- When creating new skills, always start with the frontmatter template
+
+## Known Issues & Solutions
+
+### Issue: Skill Not Detected by Claude Code (Fixed 2026-03-03)
+
+**Problem**: Skills without YAML frontmatter at the beginning of SKILL.md are invisible to Claude Code.
+
+**Affected**:
+- ✅ Fixed: `nextjs-expert` - missing frontmatter
+- ✅ Fixed: `css-tricks` - missing frontmatter
+
+**Solution**: Added required YAML frontmatter:
+```yaml
+---
+name: Skill Name
+description: Brief description...
+---
+```
+
+**Prevention**: Always validate frontmatter before committing new or updated skills.
